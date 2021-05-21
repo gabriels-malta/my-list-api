@@ -28,9 +28,7 @@ namespace MyList.Application.Persistence
 
         public Item Get(string id) => _db.TryGetValue(id, out Item item) ? item : null;
 
-#pragma warning disable S1854 // Unused assignments should be removed
         public void Save(Item item) => _db.AddOrUpdate(item.Id, item, updateValueFactory: (key, oldValue) => oldValue = item);
-#pragma warning restore S1854 // Unused assignments should be removed
 
         public int Delete(string id) => _db.TryRemove(id, out _) ? 1 : -1;
     }
