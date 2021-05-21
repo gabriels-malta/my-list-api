@@ -1,6 +1,6 @@
-dotnet new classlib -f netstandard2.1 -n MyList.Domain -o ./src/MyList.Domain
+dotnet new classlib -f netstandard2.0 -n MyList.Domain -o ./src/MyList.Domain
 
-dotnet new classlib -f netstandard2.1 -n MyList.Application -o ./src/MyList.Application
+dotnet new classlib -f netstandard2.0 -n MyList.Application -o ./src/MyList.Application
 
 rm ./src/**/Class1.cs
 
